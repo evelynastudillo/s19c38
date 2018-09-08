@@ -1,1 +1,4 @@
-<h1>realizadas</h1>
+<h1>Tus To-dos</h1>
+<% @completedtasks.each do |completedtask| %>
+<p><%=  completedtask.todo.name%></p>
+<% end %>
