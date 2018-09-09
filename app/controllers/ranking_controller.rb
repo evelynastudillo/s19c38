@@ -1,5 +1,5 @@
 class RankingController < ApplicationController
   def index
-      @ranking = current_user.completedtasks
+      @users= current_user.completedtasks
   end
 end

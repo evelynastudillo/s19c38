@@ -5,13 +5,13 @@
 <h1>Tus To-dos </h1>
 <br>
 <div class="container">
-<% @completedtasks.each do |completedtask| %>
-<br>
-<br>
-<br>
-<h3 style="background-color:#6E6E6E;"><%=  completedtask.todo.name%></h3>
-<p><%= image_tag completedtask.todo.photo %></p>
-<%= link_to "No lo hice!", remove_todo_path(todo), method: :delete%>  
+  <% @completedtasks.each do |completedtask| %>
+  <br>
+  <br>
+  <br>
+  <h3 style="background-color:#6E6E6E;"><%=  completedtask.todo.name%></h3>
+  <p><%= image_tag completedtask.todo.photo %></p>
+  <%= link_to "No lo hice!", remove_todo_path(todo), method: :delete%>
 
-<% end %>
+  <% end %>
 </div>
