@@ -12,9 +12,9 @@ before_action :authenticate_user!, only: [:create, :destroy, :remove_todo]
       redirect_to todos_path, notice: ' tarea  completada'
   end
 
-  def remove_todo
-  @todo = Todo.find(params[:todo_id])
-  @todo.completedtasks.destroy
+  def destroy
+  @completedtask = Completedtask.find(params[:id])
+  @completedtask.destroy
   redirect_to completedtasks_path
   end
 end
