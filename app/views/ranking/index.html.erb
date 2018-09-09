@@ -1,14 +1,26 @@
-<h1>Ranking</h1>
 <div class="container">
-  <% @users.each do |user| %>
+    <h1>Ranking Diechiochero</h1>
 
-  <br>
+    <br>
 
-  <h3><%= user.email%></h3>
-  <p><%= user.photo%></p>
-  <p><%= user.completedtasks.count%></p>
-  <p><%= user.photo%></p>
+  <table class="table table-sm">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Foto</th>
+        <th scope="col">Usuario</th>
+        <th scope="col">TO DOS completados</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+      <tr>
+        <td><%= user.photo%></td>
+        <td><%= user.email%></td>
+        <td><%= user.completedtasks.count%></td>
 
-
-  <% end %>
-</div>
+      </tr>
+      <tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
