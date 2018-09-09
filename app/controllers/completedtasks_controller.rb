@@ -1,19 +1,21 @@
 class CompletedtasksController < ApplicationController
-  before_action :authenticate_user!
+before_action :authenticate_user!
+  def index
+    @completedtasks = Completedtask.all
+  end
+
 
   def create
     @todo = Todo.find(params[:todo_id])
     @completedtask = Completedtask.new(todo: @todo, user: current_user)
-    if @completedtask.save
+    @completedtask.save
       redirect_to todos_path, notice: ' tarea  completada'
-    else
-      redirect_to todos_path, alert: 'tarea DEScompletada'
-    end
   end
 
-def index
-  @completedtasks = Completedtask.all
-end
-
-
+  def destroy
+  @todo = Todo.find(params[:todo_id])
+  @completedtask = Completedtask.find_by(todo: @todo, user: current_user)
+  @completedtask.delete
+  redirect_to root_path
+  end
 end

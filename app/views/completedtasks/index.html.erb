@@ -1,4 +1,14 @@
+
+
+
+
 <h1>Tus To-dos</h1>
+<br>
+<div class="container">
 <% @completedtasks.each do |completedtask| %>
 <p><%=  completedtask.todo.name%></p>
+<p><%= completedtasktodo.photo %></p>
+<p><%= link_to "abortar",  method: :post %><p>
+
 <% end %>
+</div>

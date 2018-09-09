@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
-  get 'completedtasks/create'
   resources :todos, only: :index do
-    resources :completedtasks, only: :create
+    resources :completedtasks,  only: :create
   end
 
    resources :completedtasks, only: :index
+
+   delete  '/todos/:todo_id/completedtasks', to: 'completedtask#destroy', as: 'destroy_completedtask'
+
 
   root to: 'todos#index'
   devise_for :users

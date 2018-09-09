@@ -8,43 +8,43 @@
 Todo.destroy_all
 Todo.create(
   name: 'Salir Temprano de la pega',
-  photo: "https://i.imgflip.com/khda2.jpg"
+  photo: "https://i1.wp.com/www.profe-de-espanol.de/wp-content/uploads/2016/06/Download-5-300x300.png?fit=450,300&zoom=2&strip=all"
 )
 
 Todo.create(
   name: 'Hacer Pebre',
-  photo: "https://img-global.cpcdn.com/002_recipes/be651c761d0a26fa/400x400cq70/photo.jpg"
+  photo: "https://i.pinimg.com/originals/71/d4/08/71d408417c1b83f795c66bcef4b9e9e5.jpg"
 )
 
 Todo.create(
   name: 'Comer Asado',
-  photo: "http://www.radiozero.cl/static/2016/06/asado-400x400.jpg"
+  photo: "http://www.tallereslumen.cl/wp-content/uploads/2018/08/asado_800x800-300x300.jpg"
 )
 
 Todo.create(
   name: 'Comer Empanada',
-  photo: "https://www.meals.com/ImagesRecipes/140513lrg.jpg"
+  photo: "http://i1.wp.com/www.serviestrategicos.cl/portal/wp-content/uploads/2016/05/empanadas-de-pino.jpg?resize=300%2C300"
 )
 
 
 Todo.create(
   name: 'Ir a una Fonda',
-  photo: "http://especiales2.cooperativa.cl/temas/site/artic/20140905/imag/foto_0000000320140905181412.jpg"
+  photo: "http://www.cultura.gob.cl/wp-content/uploads/2014/09/15081494149_f896a67a43_z-300x300.jpg"
 )
 Todo.create(
   name: 'Tomar Terremotos (muchos)',
-  photo: "http://especiales2.cooperativa.cl/temas/site/artic/20140905/imag/foto_0000000320140905181412.jpg"
+  photo: "https://t1.rg.ltmcdn.com/es/images/9/1/3/img_terremoto_6_45319_300_square.jpg"
 )
 Todo.create(
   name: 'Bailar cueca (poco)',
-  photo: "http://www.estoy.cl/assets/uploads/files/ba797-talleres_cuecas_principal.gif"
+  photo: "https://cl.superprof.com/imagenes/anuncios/profesor-home-joven-bailarina-realiza-clases-cueca-danzas-latinoamericanas-como-samba-marinera-cumbia-colombiana-otros.jpg"
 )
 
 Todo.create(
   name: 'Encumbrar Volantines',
-  photo: "https://pbs.twimg.com/profile_images/3746941368/315e362e99c8f1433911cb3a8d9235aa_400x400.jpeg"
+  photo: "http://blog.hellowine.cl/wp-content/uploads/2015/09/volantin1-300x300.jpg"
 )
 Todo.create(
   name: 'Dieta Post 18',
-  photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzhN__qK1pFkSES5WtbDtW4jQPC0XUkPydt2wlxhnsabf1UBCM"
+  photo: "https://coastrangecrossfit.com/wp-content/uploads/2018/06/Keto-MEME.jpg"
 )
