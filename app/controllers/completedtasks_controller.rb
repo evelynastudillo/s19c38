@@ -1,5 +1,5 @@
 class CompletedtasksController < ApplicationController
-before_action :authenticate_user!
+before_action :authenticate_user!, only: [:create, :destroy, :remove_todo]
   def index
     @completedtasks = Completedtask.all
   end
@@ -12,10 +12,9 @@ before_action :authenticate_user!
       redirect_to todos_path, notice: ' tarea  completada'
   end
 
-  def destroy
+  def remove_todo
   @todo = Todo.find(params[:todo_id])
-  @completedtask = Completedtask.find_by(todo: @todo, user: current_user)
-  @completedtask.delete
-  redirect_to root_path
+  @todo.completedtasks.destroy
+  redirect_to completedtasks_path
   end
 end

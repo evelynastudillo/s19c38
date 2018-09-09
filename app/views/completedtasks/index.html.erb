@@ -11,7 +11,7 @@
 <br>
 <h3 style="background-color:#6E6E6E;"><%=  completedtask.todo.name%></h3>
 <p><%= image_tag completedtask.todo.photo %></p>
-<p><%= link_to "No lo hice!"%></p>
+<%= link_to "No lo hice!", remove_todo_path(todo), method: :delete%>  
 
 <% end %>
 </div>
