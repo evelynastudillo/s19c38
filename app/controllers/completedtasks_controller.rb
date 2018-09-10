@@ -1,5 +1,5 @@
 class CompletedtasksController < ApplicationController
-before_action :authenticate_user!, only: [:create, :destroy, :remove_todo]
+before_action :authenticate_user!
   def index
     @completedtasks = Completedtask.all
   end

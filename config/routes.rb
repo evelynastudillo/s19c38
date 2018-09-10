@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
    resources :completedtasks, only: :index
 
-   delete 'todo/:todo_id/completedtask', to: 'completedtasks#destroy', as: 'destroy_completedtask'
+   #delete 'todo/:todo_id/completedtask', to: 'completedtasks#destroy', as: 'destroy_completedtask'
 
 
 
