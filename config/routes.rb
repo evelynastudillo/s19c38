@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
   get 'ranking/index'
+  get 'todos/:id', to: 'todos#show', as: 'todo'
   resources :todos, only: :index do
-    resources :completedtasks,  only: :create
+    resources :completedtasks,  only: [:create, :destroy]
   end
 
-   resources :completedtasks, only: :index
+  resources :completedtasks, only: :index
 
-   #delete 'todo/:todo_id/completedtask', to: 'completedtasks#destroy', as: 'destroy_completedtask'
+
+   delete 'todos/:todo_id/completedtasks/:completedtask_id', to: 'completedtasks#delete', as: 'delete_completedtak'
 
 
 

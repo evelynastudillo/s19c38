@@ -7,8 +7,9 @@
 
   <h3 style="background-color:#6E6E6E;"><%=  completedtask.todo.name%></h3>
   <p><%= image_tag completedtask.todo.photo %></p>
-  <%= link_to "No lo hice!" ,
-    method: :delete%>
+  <%= link_to 'No lo hice!',todo_completedtask_path(todos_path, current_user.completedtasks),
+  data: {confirm: 'Are you sure?'},
+  method: :delete, class: 'btn btn-danger' %>
 
   <% end %>
 </div>

@@ -1,5 +1,5 @@
 class CompletedtasksController < ApplicationController
-before_action :authenticate_user!
+before_action :authenticate_user!, only:[:destroy, :show, :create, :index, :delete]
   def index
     @completedtasks = Completedtask.all
   end
@@ -13,8 +13,9 @@ before_action :authenticate_user!
   end
 
   def destroy
-  @completedtask = Completedtask.find(params[:id])
-  @completedtask.destroy
-  redirect_to completedtasks_path
+  @todo = Todo.find(params[:todo_id]).destroy
+  @completedtask = Completedtask.find_by(user: current_user, todo: @todo)
+
+  redirect_to root_path, notice: 'Ok, descompletada!'
   end
 end
