@@ -2,8 +2,12 @@ class CompletedtasksController < ApplicationController
 before_action :authenticate_user!, only:[:destroy, :show, :create, :index, :delete]
   def index
     @completedtasks = Completedtask.all
+    @users = User.all
   end
 
+ def show
+   @user = User.find(params[:id])
+ end
 
   def create
     @todo = Todo.find(params[:todo_id])

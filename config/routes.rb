@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   end
 
   resources :completedtasks, only: :index
-
+  delete 'remove_todo/:completedtask_id', to: 'completedtasks#remove_todo', as: 'remove_todo'
 
   root to: 'todos#index'
   devise_for :users
