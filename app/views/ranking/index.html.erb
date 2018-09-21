@@ -12,7 +12,7 @@
       </tr>
     </thead>
     <tbody>
-      <% @users.each do |user| %>
+      <% @users.limit(5).each do |user| %>
       <tr>
         <td><%= user.photo%></td>
         <td><%= user.email%></td>

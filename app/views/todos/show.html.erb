@@ -1,3 +1,6 @@
+
 <%= image_tag @todo.photo %>
 <%= @todo.name %>
 <p> completado <%= time_ago_in_words @todo.created_at %> a go </p>
+
+ <td><%= link_to 'Atrás', todos_path, class: "btn btn-danger text-white"  %></td>

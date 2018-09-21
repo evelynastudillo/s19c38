@@ -11,7 +11,8 @@
 
           <td><div class="p-3 mb-2 bg-dark text-white"><h3><%= todo.name %></h3></div>
           <%= link_to "Completado!", todo_completedtasks_path(todo), class: 'btn btn-success', method: :post %></td>
-          <td><%= link_to 'Ver Detalles', todo_path, class: "btn btn-primary text-white" %></td>
+          <tr>
+          <td><%= link_to 'Ver Detalles', todo, class: "btn btn-info" %></td>
       <% end %>
         </tr>
     </tbody>
