@@ -1,6 +1,17 @@
 
-<%= image_tag @todo.photo %>
-<%= @todo.name %>
-<p> completado <%= time_ago_in_words @todo.created_at %> a go </p>
+<div class="container">
 
- <td><%= link_to 'Atrás', todos_path, class: "btn btn-danger text-white"  %></td>
+  <h2>Detalle</h2>
+  <br>
+  <table class="table">
+    <tbody>
+<tr>
+  <td><%= image_tag @todo.photo %></td>
+
+    <td><div class="p-3 mb-2 bg-dark text-white"><h3><%= @todo.name %></h3></div></td>
+    <td> completed <%= time_ago_in_words @todo.created_at %> a go </td>
+  </tr>
+  </tbody>
+</div>
+
+<%= link_to 'Atrás', todos_path, class: "btn btn-danger text-white"  %>
